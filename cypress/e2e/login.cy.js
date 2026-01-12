@@ -13,7 +13,7 @@ describe('Fluxo de Login', () => {
 
   it('Deve fazer login com sucesso', () => {
     // Abre a página de login
-    cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+    cy.visit('/auth/login')
 
     // Preenche os campos de login
     cy.get(selectorsList.usernameField).type(userData.userSuccess.username)
@@ -27,7 +27,7 @@ describe('Fluxo de Login', () => {
   })
 
   it('login-fail', () => {
-    cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+    cy.visit('/auth/login')
     cy.get(selectorsList.usernameField).type(userData.userFail.username)
     cy.get(selectorsList.passwordFiel).type(userData.userFail.password)
     cy.get(selectorsList.loginButton).click()

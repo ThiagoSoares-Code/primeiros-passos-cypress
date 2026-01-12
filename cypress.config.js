@@ -6,5 +6,6 @@ export default defineConfig({
     setupNodeEvents(on, config) {
       return config;
     },
+    baseUrl: 'https://opensource-demo.orangehrmlive.com/web/index.php',
   },
 });
